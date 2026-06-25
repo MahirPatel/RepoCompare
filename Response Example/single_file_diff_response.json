@@ -1,0 +1,5 @@
+{
+    "status": "1",
+    "diff": "--- routes.php\n+++ routes.php\n @ <?php\n-Router::add('orders', 'OrderController@index');\n+Router::add('orders', 'OrderController@list');\n+Router::add('orders/new', 'OrderController@create');\n return Router::dispatch();",
+    "fileStatus": "modified"
+}

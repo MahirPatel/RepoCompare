@@ -1,0 +1,59 @@
+{
+    "status": "1",
+    "message": "Repository compared successfully",
+    "data": {
+        "Repository": {
+            "BaseRepository": "/var/www/html/inventory",
+            "ParentRepository": "/var/www/html/petpooja_billing"
+        },
+        "Summary": {
+            "total": 4,
+            "modified": 1,
+            "new": 1,
+            "deleted": 1,
+            "unchanged": 1
+        },
+        "FileTree": {
+            "folders": {
+                "config": {
+                    "name": "config",
+                    "folders": {},
+                    "files": [
+                        {
+                            "name": "bootstrap.php",
+                            "path": "/var/www/html/inventory/config/bootstrap.php",
+                            "relativePath": "config/bootstrap.php",
+                            "status": "unchanged"
+                        },
+                        {
+                            "name": "routes.php",
+                            "path": "/var/www/html/inventory/config/routes.php",
+                            "relativePath": "config/routes.php",
+                            "status": "modified"
+                        }
+                    ]
+                },
+                "controllers": {
+                    "name": "controllers",
+                    "folders": {},
+                    "files": [
+                        {
+                            "name": "OrderController.php",
+                            "path": "/var/www/html/inventory/controllers/OrderController.php",
+                            "relativePath": "controllers/OrderController.php",
+                            "status": "deleted"
+                        }
+                    ]
+                }
+            },
+            "files": [
+                {
+                    "name": "README.md",
+                    "path": "/var/www/html/petpooja_billing/README.md",
+                    "relativePath": "README.md",
+                    "status": "new"
+                }
+            ]
+        }
+    }
+}

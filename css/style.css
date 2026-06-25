@@ -1,0 +1,363 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-1px);
+}
+
+/* Summary stats bar */
+.summary-stat {
+    border-radius: 8px;
+    min-width: 80px;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* File tree */
+#fileTree {
+    max-height: 600px;
+    overflow-y: auto;
+    background: white;
+    border-radius: 8px;
+}
+
+.tree-search {
+    width: 150px;
+}
+
+.jstree-default .jstree-node {
+    min-height: 28px;
+    line-height: 28px;
+    margin-left: 0;
+}
+
+.jstree-default .jstree-anchor {
+    padding: 2px 6px;
+    font-size: 13px;
+}
+
+.jstree-default .jstree-clicked {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+}
+
+.jstree-default .jstree-hovered {
+    background: #f5f5f5 !important;
+}
+
+.jstree-default .folder-has-changes {
+    background-color: #e8f5e8 !important;
+    border-left: 3px solid #28a745 !important;
+    font-weight: 500 !important;
+}
+
+.jstree-default .folder-has-changes:hover {
+    background-color: #d4edda !important;
+}
+
+.jstree-default .file-modified {
+    background-color: #fff3cd !important;
+    border-left: 3px solid #ffc107 !important;
+    font-weight: 500 !important;
+}
+
+.jstree-default .file-modified:hover {
+    background-color: #ffeaa7 !important;
+}
+
+.jstree-default .file-new {
+    background-color: #cfe2ff !important;
+    border-left: 3px solid #0d6efd !important;
+    font-weight: 500 !important;
+}
+
+.jstree-default .file-new:hover {
+    background-color: #b6d4fe !important;
+}
+
+.jstree-default .file-deleted {
+    background-color: #f8d7da !important;
+    border-left: 3px solid #dc3545 !important;
+    font-weight: 500 !important;
+    text-decoration: line-through;
+}
+
+.jstree-default .file-deleted:hover {
+    background-color: #f1aeb5 !important;
+}
+
+/* Diff viewer controls */
+.diff-header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 4px 0;
+}
+
+.diff-file-name {
+    font-size: 13px;
+    color: #495057;
+    word-break: break-all;
+}
+
+.diff-buttons {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* Diff container — scrollable, sticky header lives inside */
+.diff-container {
+    background: #2d3748;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 560px;
+    border: 1px solid #e9ecef;
+    position: relative;
+}
+
+.diff-header {
+    background: #1a202c;
+    color: white;
+    padding: 10px 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.diff-stats {
+    display: flex;
+    gap: 12px;
+}
+
+.stat-additions {
+    color: #48bb78;
+    font-weight: 500;
+}
+
+.stat-deletions {
+    color: #f56565;
+    font-weight: 500;
+}
+
+/* Diff table with line number gutters */
+.diff-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.diff-table td {
+    padding: 1px 6px;
+    vertical-align: top;
+}
+
+.ln-base,
+.ln-parent {
+    width: 40px;
+    min-width: 40px;
+    text-align: right;
+    color: #718096;
+    background-color: #1a202c;
+    border-right: 1px solid #4a5568;
+    user-select: none;
+    font-size: 11px;
+    padding: 1px 6px;
+}
+
+.diff-cell {
+    white-space: pre-wrap;
+    word-break: break-all;
+    padding: 1px 8px;
+    width: 100%;
+}
+
+tr.addition {
+    background-color: #22543d;
+    color: #68d391;
+}
+
+tr.addition .ln-base,
+tr.addition .ln-parent {
+    background-color: #1a3a28;
+    color: #68d391;
+}
+
+tr.deletion {
+    background-color: #742a2a;
+    color: #fc8181;
+}
+
+tr.deletion .ln-base,
+tr.deletion .ln-parent {
+    background-color: #3a1a1a;
+    color: #fc8181;
+}
+
+tr.context {
+    background-color: #2d3748;
+    color: #e2e8f0;
+}
+
+tr.diff-header-row {
+    background-color: #1a202c;
+    color: #a0aec0;
+}
+
+tr.diff-header-row .ln-base,
+tr.diff-header-row .ln-parent {
+    background-color: #1a202c;
+}
+
+/* No-selection placeholder */
+#noSelection {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Diff legend */
+.diff-legend {
+    display: flex;
+    gap: 16px;
+    padding: 6px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #6c757d;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.addition-dot { background: #22543d; }
+.deletion-dot { background: #742a2a; }
+.context-dot  { background: #2d3748; }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom scrollbars */
+#fileTree::-webkit-scrollbar,
+.diff-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#fileTree::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#fileTree::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.diff-container::-webkit-scrollbar-track {
+    background: #1a202c;
+}
+
+.diff-container::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .row > .col-md-5,
+    .row > .col-md-7 {
+        margin-bottom: 20px;
+    }
+
+    #fileTree {
+        max-height: 300px;
+    }
+
+    .diff-container {
+        max-height: 350px;
+    }
+
+    .diff-header-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .diff-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .diff-buttons .btn {
+        flex: 1;
+        max-width: 120px;
+    }
+
+    .diff-file-name {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .tree-search {
+        width: 100%;
+    }
+
+    .diff-legend {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
